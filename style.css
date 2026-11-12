@@ -267,3 +267,36 @@ h3 { margin: 0 0 8px; color: var(--cream); font-size: 30px; }
         margin-top: 40px;
     }
 }
+
+/* ===== ВИПРАВЛЕННЯ МОБІЛЬНОГО ВІДОБРАЖЕННЯ ===== */
+
+/* Забороняємо сторінці виходити за межі екрана */
+html {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Зображення не повинні розширювати сторінку */
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+/* Захист каруселі від горизонтального переповнення */
+.gallery-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.gallery-track {
+    min-width: 0;
+    max-width: 100%;
+}
