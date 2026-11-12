@@ -103,3 +103,167 @@ h3 { margin: 0 0 8px; color: var(--cream); font-size: 30px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+/* ===== ГАЛЕРЕЯ СЕРТИФІКАТІВ ===== */
+
+.certificate-gallery {
+    margin-top: 65px;
+    padding: 35px 0;
+    color: #f4efe7;
+}
+
+.certificate-gallery h2 {
+    color: #f4efe7;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.gallery-description {
+    color: #e5d9ee;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gallery-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.gallery-track {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #9d84c9 #2c1e45;
+    padding: 12px 4px 20px;
+    flex: 1;
+}
+
+.gallery-track::-webkit-scrollbar {
+    height: 7px;
+}
+
+.gallery-track::-webkit-scrollbar-thumb {
+    background: #9d84c9;
+    border-radius: 10px;
+}
+
+.certificate-item {
+    position: relative;
+    flex: 0 0 220px;
+    height: 280px;
+    background: #f4efe7;
+    border: 2px solid #9d84c9;
+    border-radius: 8px;
+    overflow: hidden;
+    scroll-snap-align: center;
+    cursor: zoom-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificate-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+}
+
+.certificate-item span {
+    position: absolute;
+    color: #2c1e45;
+    font-size: 14px;
+    background: #e5d9ee;
+    padding: 4px 9px;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.certificate-item.has-photo span {
+    display: none;
+}
+
+.certificate-item img:not([src]) {
+    display: none;
+}
+
+.gallery-arrow {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #9d84c9;
+    border-radius: 50%;
+    background: #9d84c9;
+    color: #2c1e45;
+    font-size: 18px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.gallery-arrow:hover {
+    opacity: 0.75;
+}
+
+/* ЗБІЛЬШЕНЕ ФОТО */
+
+.photo-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(20, 13, 30, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 55px 20px 20px;
+}
+
+.photo-lightbox.active {
+    display: flex;
+}
+
+.photo-lightbox img {
+    max-width: 95%;
+    max-height: 90vh;
+    object-fit: contain;
+    border: 2px solid #9d84c9;
+    border-radius: 5px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    color: #f4efe7;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+/* МОБІЛЬНА ВЕРСІЯ */
+
+@media (max-width: 600px) {
+    .certificate-item {
+        flex-basis: 75%;
+        height: 260px;
+    }
+
+    .gallery-arrow {
+        width: 34px;
+        height: 34px;
+        font-size: 15px;
+    }
+
+    .gallery-wrapper {
+        gap: 5px;
+    }
+
+    .certificate-gallery {
+        margin-top: 40px;
+    }
+}
