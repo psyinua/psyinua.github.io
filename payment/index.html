@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#2c1e45">
+  <title>Оплата консультації | Юлія Широкун</title>
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { min-height:100vh; display:flex; flex-direction:column; }
+    .payment-main { flex:1; display:grid; place-items:center; padding:55px 22px; background:var(--cream); }
+    .payment-card { width:min(100%,650px); padding:clamp(28px,6vw,58px); background:var(--purple); color:var(--cream); }
+    .payment-card h1 { color:var(--cream); font-size:clamp(48px,8vw,72px); }
+    .payment-card .body-copy { color:rgba(244,239,231,.82); }
+    .payment-options { display:grid; gap:14px; margin-top:30px; }
+    .payment-option { padding:22px; border:1px solid rgba(197,180,225,.35); }
+    .payment-option h2 { font-size:34px; margin:0 0 8px; }
+    .payment-option p { color:rgba(244,239,231,.75); font-size:12px; }
+    .payment-option .button { width:100%; margin-top:8px; }
+    .back-link { display:inline-block; margin-top:25px; color:#c5b4e1; font-size:11px; text-decoration:none; }
+  </style>
+</head>
+<body>
+<header class="site-header"><a class="wordmark" href="../">Юлія Широкун</a><div class="header-controls"><a class="lang-switch active" href="../">НА ГОЛОВНУ</a></div></header>
+<main class="payment-main">
+  <section class="payment-card">
+    <p class="eyebrow eyebrow-light">ІНФОРМАЦІЯ ДЛЯ КЛІЄНТІВ</p>
+    <h1>Оплата консультації</h1>
+    <p class="body-copy">Оберіть зручний спосіб оплати. Деталі та суму необхідно узгодити з Юлією перед здійсненням платежу.</p>
+    <div class="payment-options">
+      <div class="payment-option"><h2>Оплата за IBAN</h2><p>[ДОДАЙТЕ БАНКІВСЬКІ РЕКВІЗИТИ ТА ПРИЗНАЧЕННЯ ПЛАТЕЖУ]</p><button class="button button-lavender" type="button" disabled>РЕКВІЗИТИ БУДУТЬ ДОДАНІ</button></div>
+      <div class="payment-option"><h2>Оплата через LiqPay</h2><p>[ДОДАЙТЕ ПЕРЕВІРЕНЕ ПЛАТІЖНЕ ПОСИЛАННЯ LIQPAY]</p><a class="button button-lavender" href="#" aria-disabled="true" onclick="return false;">ПОСИЛАННЯ БУДЕ ДОДАНО</a></div>
+    </div>
+    <a class="back-link" href="../">← ПОВЕРНУТИСЯ НА ГОЛОВНУ</a>
+  </section>
+</main>
+<footer class="site-footer"><p>© <span id="year"></span> Юлія Широкун</p></footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body></html>
