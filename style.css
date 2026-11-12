@@ -55,7 +55,17 @@ h3 { margin: 0 0 8px; color: var(--cream); font-size: 30px; }
 .hero-decoration { position: absolute; width: 260px; height: 260px; border: 1px solid rgba(157,132,201,.35); border-radius: 50%; right: -110px; bottom: -120px; }
 .section-inner { width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: clamp(76px, 10vw, 132px) 0; }
 .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(40px, 8vw, 110px); align-items: start; }
-.about .section-lead, .contacts .section-lead { color: var(--cream); max-width: 720px; }
+.about .section-lead { color: var(--cream); max-width: 720px; }
+.contacts .section-lead { color: var(--ink); max-width: 680px; }
+.contacts .eyebrow { color: var(--lavender); }
+.contacts h2, .contacts h3 { color: var(--purple); }
+.contacts .body-copy { color: var(--ink); }
+.contacts .button-outline-dark {
+  border-color: rgba(44,30,69,.55);
+  color: var(--purple);
+  background: transparent;
+}
+.contacts .button-outline-dark:hover { background: rgba(44,30,69,.07); }
 .placeholder-hint { margin-top: 28px; color: #c5b4e1; font-size: 10px; letter-spacing: .08em; }
 .credentials-card { border: 1px solid rgba(197,180,225,.35); padding: clamp(24px, 4vw, 42px); }
 .credential-item { padding: 18px 0; border-bottom: 1px solid rgba(197,180,225,.22); }
@@ -63,7 +73,7 @@ h3 { margin: 0 0 8px; color: var(--cream); font-size: 30px; }
 .credential-item p { margin: 0; color: rgba(244,239,231,.78); font-size: 12px; line-height: 1.8; }
 .small-note { color: rgba(244,239,231,.55); font-size: 10px; line-height: 1.7; }
 .contacts-inner { padding-top: clamp(72px, 9vw, 110px); padding-bottom: clamp(72px, 9vw, 110px); }
-.contacts .section-lead { max-width: 680px; }
+.contacts h2 { color: var(--purple); }
 .contact-layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 9vw; margin-top: 42px; align-items: start; }
 .inline-link { color: #c5b4e1; text-underline-offset: 4px; }
 .contact-actions { display: flex; flex-direction: column; align-items: stretch; gap: 12px; max-width: 330px; }
@@ -92,35 +102,4 @@ h3 { margin: 0 0 8px; color: var(--cream); font-size: 30px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
-}
-
-/* Контакти — у кольорах головної сторінки */
-.contact-section {
-    background-color: #f5f0e8;
-    color: #3b3542;
-}
-
-/* Заголовки та основний текст */
-.contact-section h2,
-.contact-section h3,
-.contact-section p {
-    color: #3b3542;
-}
-
-/* Посилання та контури кнопок */
-.contact-section a {
-    color: #2c1e45;
-    border-color: #2c1e45;
-}
-
-/* Лавандова кнопка Telegram */
-.contact-section .button-primary {
-    background-color: #9d84c9;
-    color: #ffffff;
-    border-color: #9d84c9;
-}
-
-/* Посилання при наведенні */
-.contact-section a:hover {
-    opacity: 0.8;
 }
