@@ -11,7 +11,12 @@
 <style>
 .document-main { min-height:70vh; padding:70px 24px; background:var(--cream); }
 .document-content { width:min(850px,100%); margin:auto; }
-.document-content h1 { font-size:clamp(42px,7vw,68px); }
+.document-content h1 {
+    font-size: clamp(28px, 7vw, 68px);
+    line-height: 1.1;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
 .document-content h2 { color:var(--purple); font-size:clamp(24px,4vw,34px); margin-top:35px; }
 .document-content p, .document-content li { font-size:13px; line-height:2; }
 .document-content ul { padding-left:24px; }
