@@ -54,7 +54,7 @@ h3 { margin: 0 0 8px; color: var(--cream); font-size: 30px; }
 .photo-note { position: absolute; bottom: 16px; left: 16px; padding: 8px 12px; background: rgba(44,30,69,.88); color: var(--cream); font-size: 9px; letter-spacing: .16em; }
 .hero-decoration { position: absolute; width: 260px; height: 260px; border: 1px solid rgba(157,132,201,.35); border-radius: 50%; right: -110px; bottom: -120px; }
 .section-inner { width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: clamp(76px, 10vw, 132px) 0; }
-.about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(40px, 8vw, 110px); align-items: start; }
+.about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(0px, 8vw, 0px); align-items: start; }
 .about .section-lead { color: var(--cream); max-width: 720px; }
 .contacts .section-lead { color: var(--ink); max-width: 680px; }
 .contacts .eyebrow { color: var(--lavender); }
