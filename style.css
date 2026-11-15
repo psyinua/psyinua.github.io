@@ -106,7 +106,7 @@ h3 { margin: 0 0 8px; color: var(--cream); font-size: 30px; }
 /* ===== ГАЛЕРЕЯ СЕРТИФІКАТІВ ===== */
 
 .certificate-gallery {
-    margin-top: 65px;
+    margin-top: 0px;
     padding: 35px 0;
     color: #f4efe7;
 }
